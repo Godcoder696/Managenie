@@ -1,5 +1,13 @@
-const express= require("express")();
+const app= require("express")();
+const dotenv= require("dotenv");
+const ConnectDB = require("./config/ConnectDB");
 
-express.listen('5000',()=>{
-    console.log("Listening to port 5000!");
+dotenv.config();
+
+ConnectDB();
+
+const port= process.env.PORT || 4000
+
+app.listen(port,async ()=>{
+    console.log(`Listening on port ${port}!`);
 })
