@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Kenia&family=Sometype+Mono&display=swap');
+
+.root{
+  background-color: #1e1e1e;
+  color: white;
+  height: 100vh;
+}
+
+.logoTxt{
+   font-family: 'Bricolage Grotesque', sans-serif;
+}

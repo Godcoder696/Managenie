@@ -3,12 +3,12 @@ const app= express();
 const dotenv= require("dotenv");
 const ConnectDB = require("./config/ConnectDB");
 const userRoutes = require("./routes/user/userRoutes")
-const adminRoutes= require('./routes/admin/adminRoutes')
 const cors = require('cors');
 
 dotenv.config();
 
 app.use(cors())
+
 app.use(express.json());
 
 ConnectDB();
@@ -24,5 +24,3 @@ app.get("/",(req,res)=>{
 })
 
 app.use('/route/user/',userRoutes);
-
-app.use('/route/admin/',adminRoutes);
