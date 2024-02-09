@@ -45,6 +45,8 @@ function SignIn() {
                     isClosable:true,
                     duration:2500
                 })
+
+                localStorage.setItem("user",data);
     
                 history.push("/dashboard")
                 

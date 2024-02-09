@@ -47,6 +47,8 @@ function SignUp() {
                     duration:2500
                 })
 
+                localStorage.setItem("user",data);
+
                 history.push("/dashboard");
             } catch (error) {
                 toast({
