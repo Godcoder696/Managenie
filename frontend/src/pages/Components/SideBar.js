@@ -20,27 +20,27 @@ function SideBar() {
             <VStack alignItems={"start"} w={"100%"}>
               <HStack mt={10} w={"100%"} p={3} spacing={5} >
                 <MdDashboard />
-                <Link color={"#3d9afc"}>Dashboard</Link>
+                <Link color={"#3d9afc"} href='/dashboard'>Dashboard</Link>
               </HStack>
               <HStack mt={3} w={"100%"} p={3} spacing={5}>
                 <RiTeamLine />
-                <Link >Team</Link>
+                <Link href='/Teams'>Team</Link>
               </HStack>
               <HStack mt={3} w={"100%"} p={3} spacing={5}>
                 <MdOutlineWorkOutline/>
-                <Link >Assigned</Link>
+                <Link href='/Assigned'>Assigned</Link>
               </HStack>
               <HStack mt={3} w={"100%"} p={3} spacing={5}>
                 <FaPlus ></FaPlus>
-                <Link >New Team</Link>
+                <Link href='/NewTeam'>New Team</Link>
               </HStack>
               <HStack mt={3} w={"100%"} p={3} spacing={5}>
                 <FaSquarespace ></FaSquarespace>
-                <Link >Rough Space</Link>
+                <Link href='/MyPlans'>My Plan</Link>
               </HStack> 
               <HStack mt={3} w={"100%"} p={3} spacing={5}>
                 <BiLogOutCircle ></BiLogOutCircle>
-                <Link >Log Out</Link>
+                <Link href='/LogOut'>Log Out</Link>
               </HStack> 
             </VStack>
           </VStack>

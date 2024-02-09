@@ -9,3 +9,7 @@
 .logoTxt{
    font-family: 'Bricolage Grotesque', sans-serif;
 }
+
+::-webkit-scrollbar{
+  display: none;
+}

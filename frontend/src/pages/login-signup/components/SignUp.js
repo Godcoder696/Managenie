@@ -47,7 +47,8 @@ function SignUp() {
                     duration:2500
                 })
 
-                localStorage.setItem("user",data);
+                localStorage.setItem("user",JSON.stringify(data));
+                console.log(data);
 
                 history.push("/dashboard");
             } catch (error) {
