@@ -7,7 +7,7 @@ import Projects from './components/Projects';
 function Dashboard() {
   return (
     <>
-        <VStack w={"100%"} h={"100%"} bgColor={"#2b2b2b"} p={10} align={"start"} spacing={5} >
+        <VStack w={"100%"} h={"100%"} bgColor={"#2b2b2b"} p={10} align={"start"} spacing={5}>
 
             <Text fontSize={"x-large"} fontWeight={"semibold"}>
                  Welcome {JSON.parse(localStorage.getItem("user")).name}
