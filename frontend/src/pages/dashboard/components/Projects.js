@@ -4,7 +4,7 @@ import React from 'react'
 function Projects() {
   return (
     <>
-        <Text alignSelf={"start"} fontSize={"x-large"} fontWeight={"semibold"}> Projects</Text>
+        {/* <Text alignSelf={"start"} fontSize={"x-large"} fontWeight={"semibold"}> Projects</Text> */}
 
         <SimpleGrid w={"100%"} minH={"max-content"} minChildWidth={"280px"} columnGap={4} rowGap={4}>
             

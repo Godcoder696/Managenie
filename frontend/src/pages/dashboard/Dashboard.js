@@ -16,6 +16,10 @@ function Dashboard() {
             <VStack overflowY={"scroll"} h={"max-content"} w={"100%"} spacing={7} alignItems={"start"}>
 
                 <Overview></Overview>
+
+                <Text fontSize={"x-large"} fontWeight={"semibold"}>
+                  PROJECTS
+                </Text>
     
                 <Projects></Projects>            
 

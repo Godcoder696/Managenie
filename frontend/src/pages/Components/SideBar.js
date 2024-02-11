@@ -24,7 +24,7 @@ function SideBar() {
               </HStack>
               <HStack mt={3} w={"100%"} p={3} spacing={5}>
                 <RiTeamLine />
-                <Link href='/Teams'>Team</Link>
+                <Link href='/Teams'>Project</Link>
               </HStack>
               <HStack mt={3} w={"100%"} p={3} spacing={5}>
                 <MdOutlineWorkOutline/>
@@ -32,7 +32,7 @@ function SideBar() {
               </HStack>
               <HStack mt={3} w={"100%"} p={3} spacing={5}>
                 <FaPlus ></FaPlus>
-                <Link href='/NewTeam'>New Team</Link>
+                <Link href='/NewTeam'>New Project</Link>
               </HStack>
               <HStack mt={3} w={"100%"} p={3} spacing={5}>
                 <FaSquarespace ></FaSquarespace>

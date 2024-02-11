@@ -46,7 +46,7 @@ function SignIn() {
                     duration:2500
                 })
 
-                localStorage.setItem("user",JSON.stringify(data));
+                localStorage.setItem("user",JSON.stringify(data));  
                 console.log(data);
     
                 history.push("/dashboard")
