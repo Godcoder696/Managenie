@@ -1,22 +1,26 @@
-import { AddIcon } from '@chakra-ui/icons'
-import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, FormLabel, Input, InputGroup, InputLeftAddon, InputRightAddon, Select, Stack, Textarea } from '@chakra-ui/react'
+import { AddIcon, CloseIcon } from '@chakra-ui/icons'
+import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, FormLabel, HStack, Input, InputGroup, InputLeftAddon, InputRightAddon, Select, Stack, Text, Textarea, useDisclosure } from '@chakra-ui/react'
 import React from 'react'
 
 function SideDrawer() {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+  const firstField = React.useRef()
   return (
     <>
       <Drawer
         isOpen={true}
         placement='right'
+        initialFocusRef={firstField}
+        onClose={onClose}
       >
         <DrawerOverlay />
-        <DrawerContent bgColor={"#2b2b2b"} color={"white"}>
-          <DrawerCloseButton />
-          <DrawerHeader borderBottomWidth='1px'>
-            Assign Task
-          </DrawerHeader>
+        <DrawerContent bgColor={"#2b2b2b"} color={"white"} >
+          <HStack borderBottomWidth='1px' w={"100%"} justify={"space-between"} p={5} align={"center"}>
+            <Text fontSize={"x-large"}>Assign Task</Text>
+            <CloseIcon cursor={"pointer"}/>
+          </HStack>
 
-          <DrawerBody>
+          <DrawerBody mt={4}>
             <Stack spacing='24px'>
               <Box>
                 <FormLabel htmlFor='username'>Task Title</FormLabel>
@@ -34,7 +38,19 @@ function SideDrawer() {
 
               <Box>
                 <FormLabel htmlFor='owner'>Assign To</FormLabel>
-                <Select id='owner' defaultValue='segun'>
+                <Select id='owner' defaultValue='segun' maxH={"300px"} overflowY={"scroll"} colorScheme='black'>
+                  <option value='segun'>Segun Adebayo</option>
+                  <option value='kola'>Kola Tioluwani</option>
+                  <option value='segun'>Segun Adebayo</option>
+                  <option value='kola'>Kola Tioluwani</option>
+                  <option value='segun'>Segun Adebayo</option>
+                  <option value='kola'>Kola Tioluwani</option>
+                  <option value='segun'>Segun Adebayo</option>
+                  <option value='kola'>Kola Tioluwani</option>
+                  <option value='segun'>Segun Adebayo</option>
+                  <option value='kola'>Kola Tioluwani</option>
+                  <option value='segun'>Segun Adebayo</option>
+                  <option value='kola'>Kola Tioluwani</option>
                   <option value='segun'>Segun Adebayo</option>
                   <option value='kola'>Kola Tioluwani</option>
                 </Select>
@@ -43,8 +59,8 @@ function SideDrawer() {
             </Stack>
           </DrawerBody>
 
-          <DrawerFooter borderTopWidth='1px'>
-            <Button mr={3} colorScheme='red' >
+          <DrawerFooter borderTopWidth='1px' >
+            <Button mr={3} colorScheme='red' onClick={onClose}>
               Cancel
             </Button>
             <Button colorScheme='green'>Assign</Button>
