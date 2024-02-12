@@ -9,6 +9,7 @@ import Assigned from './pages/assigned/Assigned';
 import NewTeam from './pages/teams/NewTeam';
 import LogOut from './pages/logout/LogOut';
 import MyPlans from './pages/plan/MyPlans';
+import Team from './pages/teams/Team';
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
                   <Route path="/Assigned"><Assigned /></Route>
                   <Route path="/NewTeam"><NewTeam/></Route>
                   <Route path="/MyPlans"><MyPlans/></Route>
-                  <Route path="/LogOut"><LogOut/></Route>
+                  {/* <Route path="/LogOut"><LogOut/></Route> */}
+                  <Route path="/projects:id"><Team/></Route>
                 </>
                 :
                 <>Sign In</>
