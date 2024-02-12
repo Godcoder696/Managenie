@@ -1,15 +1,14 @@
-import { HStack, Text } from '@chakra-ui/react';
+import { HStack } from '@chakra-ui/react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
+import SideBar from './pages/Components/SideBar';
+import Assigned from './pages/assigned/Assigned';
 import DashBoard from './pages/dashboard/Dashboard';
 import LoginSignup from './pages/login-signup/LoginSignup';
-import SideBar from './pages/Components/SideBar';
-import Teams from './pages/teams/Teams';
-import Assigned from './pages/assigned/Assigned';
 import NewTeam from './pages/teams/NewTeam';
-import LogOut from './pages/logout/LogOut';
-import MyPlans from './pages/plan/MyPlans';
 import Team from './pages/teams/Team';
+import Teams from './pages/teams/Teams';
+import LogOut from './pages/logout/LogOut';
 
 function App() {
   return (
@@ -28,8 +27,7 @@ function App() {
                   <Route path="/Teams"><Teams /></Route>
                   <Route path="/Assigned"><Assigned /></Route>
                   <Route path="/NewTeam"><NewTeam/></Route>
-                  <Route path="/MyPlans"><MyPlans/></Route>
-                  {/* <Route path="/LogOut"><LogOut/></Route> */}
+                  <Route path="/LogOut"><LogOut/></Route>
                   <Route path="/projects:id"><Team/></Route>
                 </>
                 :

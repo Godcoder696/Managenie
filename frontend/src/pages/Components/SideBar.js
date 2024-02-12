@@ -35,10 +35,6 @@ function SideBar() {
                 <Link href='/NewTeam'>New Project</Link>
               </HStack>
               <HStack mt={3} w={"100%"} p={3} spacing={5}>
-                <FaSquarespace ></FaSquarespace>
-                <Link href='/MyPlans'>My Plan</Link>
-              </HStack> 
-              <HStack mt={3} w={"100%"} p={3} spacing={5}>
                 <BiLogOutCircle ></BiLogOutCircle>
                 <Link href='/LogOut'>Log Out</Link>
               </HStack> 
