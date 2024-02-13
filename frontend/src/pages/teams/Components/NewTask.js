@@ -4,18 +4,31 @@ import React from 'react';
 import Task from './Task';
 
 function NewTask() {
+    const headText={
+        md:"large",
+        sm:"medium"
+    }
+    const text={
+        md:"medium",
+        sm:"small"
+    }
+    const buttonSize={
+        md:"md",
+        sm:"sm"
+    }
   return (
     <>
         <VStack align={"start"} spacing={5} overflowY={"scroll"}>
             <HStack w={"100%"} justify={"space-between"}>
-                <Text fontSize={"large"} >Assigned Tasks:</Text>
-                <Button colorScheme='green' >
+                <Text fontSize={headText} >Assigned:</Text>
+                <Button colorScheme='green' size={buttonSize}>
                     <PlusSquareIcon mr={2}/>
-                    New Task
+                    <Text size={text}>New Task</Text>
                 </Button>
             </HStack>
             <SimpleGrid minChildWidth={"300px"} w={"100%"} columnGap={4} rowGap={4} >
-                <Task/>
+                <Task status="in progress" col="orange"/>
+                <Task status="completed" col="green"/>
             </SimpleGrid>
         </VStack>
         {/* <SideDrawer></SideDrawer>  */}

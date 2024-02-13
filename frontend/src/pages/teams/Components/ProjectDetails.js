@@ -3,18 +3,30 @@ import { Button, HStack, Input, InputGroup, InputLeftAddon, Menu, MenuButton, Me
 import React from 'react'
 
 function ProjectDetails() {
+    const headText={
+        md:"large",
+        sm:"medium"
+    }
+    const text={
+        md:"medium",
+        sm:"small"
+    }
+    const buttonSize={
+        md:"md",
+        sm:"sm"
+    }
   return (
     <>
-        <VStack align={"start"} spacing={5} overflowY={"scroll"}>
-            <Text fontSize={"large"} >Project Details:</Text>
+        <VStack align={"start"} spacing={5} overflowY={"scroll"} >
+            <Text fontSize={headText} >Project Details:</Text>
 
             <VStack align={"start"} w={"90%"}>
-                <Text color={"#3d9afc"}>project name*</Text>
+                <Text color={"#3d9afc"} fontSize={text}>project name*</Text>
                 <Input type='text' value='previous name'></Input>
             </VStack>
 
             <VStack align={"start"} w={"90%"}>
-                <Text color={"#3d9afc"}>project description*</Text>
+                <Text color={"#3d9afc"} fontSize={text}>project description*</Text>
                 <Textarea type='text' value={"previous description"} resize={"none"} h={"150px"}/>
             </VStack>
 
@@ -24,9 +36,9 @@ function ProjectDetails() {
             </HStack>   
 
             <HStack w={"90%"} justify={"space-between"}>
-                <Text color={"#3d9afc"}>current team:</Text>
+                <Text color={"#3d9afc"} fontSize={text}>current team:</Text>
                 <Menu>
-                    <MenuButton as={Button} colorScheme='teal' rightIcon={<ChevronDownIcon />} w="45%">
+                    <MenuButton as={Button} colorScheme='teal' rightIcon={<ChevronDownIcon />} w="45%" size={buttonSize}>
                         View
                     </MenuButton>
                     <MenuList colorScheme='teal' maxH={"200px"}     overflowY={"scroll"} bgColor={"teal"} >
@@ -36,7 +48,7 @@ function ProjectDetails() {
             </HStack>
 
             <VStack w={"90%"}>
-                <InputGroup>
+                <InputGroup size={buttonSize}>
                     <InputLeftAddon bgColor={"transparent"}>
                         <SearchIcon/>
                     </InputLeftAddon>
@@ -45,9 +57,9 @@ function ProjectDetails() {
             </VStack>
 
             <HStack w={"90%"} justify={"space-between"}>
-                <Text color={"#3d9afc"}>current managers:</Text>
+                <Text color={"#3d9afc"} fontSize={text}>managers:</Text>
                 <Menu >
-                    <MenuButton as={Button} colorScheme='purple' rightIcon={<ChevronDownIcon />} w="45%">
+                    <MenuButton as={Button} colorScheme='purple' rightIcon={<ChevronDownIcon />} w="45%" size={buttonSize}>
                         View
                     </MenuButton>
                     <MenuList colorScheme='purple' maxH={"200px"}     overflowY={"scroll"} bgColor={"purple"} >
@@ -55,19 +67,19 @@ function ProjectDetails() {
                     </MenuList>
                 </Menu>
             </HStack>
-            
+
             <VStack w={"90%"}>
-                <InputGroup>
+                <InputGroup size={buttonSize}>
                     <InputLeftAddon bgColor={"transparent"}>
                         <SearchIcon/>
                     </InputLeftAddon>
-                    <Input placeholder='Search to add managers'/>
+                    <Input placeholder='Search to add managers' />
                 </InputGroup>
             </VStack>
 
             <VStack w={"90%"} align={"start"}>
-                <Text color={"#3d9afc"}>Client*</Text>
-                <Input type='text' value={"client"}></Input>
+                <Text color={"#3d9afc"} fontSize={text}>Client*</Text>
+                <Input type='text' value={"client"} size={buttonSize}></Input>
             </VStack>
 
         </VStack>
